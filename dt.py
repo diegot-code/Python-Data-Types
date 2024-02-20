@@ -6,81 +6,68 @@
 # Text Type: Str
 # Commonly seen: anywhere and everywhere
 
-a = "I rode my bike." #string
 
-# print(a)
-# print(type(a))
+# print("I rode my bike.") #string
+# print(type("I rode my bike."))
 
-first_str = "I also"
-last_str = "eat sushi"
-
-# print(first_str+last_str)
-# print(first_str + " " + last_str)
+# print("I also"+"eat sushi.")
+# print("I also" + " " + "eat sushi.")
 
 
 # ____________________________________________________________________________________________________________________
 # Numeric Types: int, float, complex
 # Commonly seen: in all backend languages every 3 lines
-b = 4 # int
+
+# print(4) # int
+# print(type(4))
+
+#-----------------------------------------
 
 
-# print(b)
-# print(type(b))
+# print(3.0) # float
+# print(type(3.0))
 
-c = 3.0 # float
-# print(c)
-# print(type(c))
+# print(14.55) # float
+# print(type(14.55))
 
-d = 14.55 # float
-# print(d)
-# print(type(d))
+#-----------------------------------------
 
-e = (4+0j) # complex
-# print(e)
-# print(type(e))
 
-test = "6"
-# print(test + b)
-# print(int(test) + b)
-
+# print(4+0j) # complex
+# print(type(4+0j))
 
 # ____________________________________________________________________________________________________________________
 # Sequence Types: list, tuple, range
 # Commonly seen: in quick refernce material and in math
 
-f = ["Volvo", "BMW", "Mercedes", "Toyota"] # list positions start at 0
+ # list positions start at 0
 
-# print(f)
-# print(f[0]) # first item in the list
-# print(f[3]) # fourth item in the list
-# print(g[4]) # fifth item (if there was one there...)
+# print(["Volvo", "BMW", "Mercedes", "Toyota"])
+# print(["Volvo", "BMW", "Mercedes", "Toyota"][0]) # first item in the list
+# print(["Volvo", "BMW", "Mercedes", "Toyota"][3]) # fourth item in the list
+# print(["Volvo", "BMW", "Mercedes", "Toyota"][4]) # fifth item (if there was one there...should display an IndexError)
 
-g = ("Laws of Physics", "Matter", "Medical Records", "Death") # tuples are immutable, cannot be added to, removed, or reassigned.
+#-----------------------------------------
 
-# print(g)
-# print(g[4])
-# print(g[3])
+# print(("Laws of Physics", "Matter", "Medical Records", "Death")) # tuples are immutable, cannot be added to, removed, or reassigned.
+# print(("Laws of Physics", "Matter", "Medical Records", "Death")[4])
+# print(("Laws of Physics", "Matter", "Medical Records", "Death")[3])
 
-h = range(10) # ranges' default starts at 0 for the starting number
+#-----------------------------------------
 
-# print(h)
-# print(h[1])
+# print(range(10)) # ranges' default starts at 0 for the starting number
+# print(range(10)[1])
 
-i = range(4, 14) # this range starts from 4 and ends at 14
-
-# print(i)
-# print(i[6])
-
+# print(range(4, 14)) # this range starts from 4 and ends at 14
+# print(range(4, 14)[6])
 
 # ____________________________________________________________________________________________________________________
 # Mapping Type: dict
 # Commonly seen: in databases
 
-j = {"name" : "Jane" , "age" : "32"} #dictionary
-
-# print(j)
-# print(j["name"])
-# print(j["Jane"])
+# print({"name" : "Jane" , "age" : "32"}) #dictionary
+# print({"name" : "Jane" , "age" : "32"}["name"])
+# print({"name" : "Jane" , "age" : "32"}["Jane"]) # KeyError
 
 k = {
     "firstname" : "Diego",
@@ -92,7 +79,7 @@ k = {
 
 l = {
 
-    "human1" : {
+    "patient1" : {
         "id" : "1",
         "name" : "Diego Torres",
         "bloodType" : "O",
@@ -102,7 +89,7 @@ l = {
         "race" : "Asian/Hispanic"
     },
 
-    "human2" :{
+    "patient2" :{
         "id" : "2",
         "name" : "John Doe",
         "bloodType" : "A",
@@ -114,64 +101,51 @@ l = {
  } # most common format using dictionaries known as a nested dictionaries
 
 # print(l)
-# print(l["human1"]) # prints the dictionary with the key of "human1"
-# print(l["human1"]["name"]) # prints the value of the key of "name" from the dictionary with the key of "human1"
+# print(l["patient1"]) # prints the dictionary with the key of "patient1"
+# print(l["patient1"]["name"]) # prints the value of the key of "name" from the dictionary with the key of "patient1"
 
 
 # ____________________________________________________________________________________________________________________
 # Set Types: set, frozenset
 # Common seen: unknown
 
-m = {"Strawberry", "Banana", "Kiwi"} # a set of unordered collection of unique elements
+# print({"Strawberry", "Banana", "Kiwi"}) # a set of unordered collection of unique elements
 
-# print(m)
+#-----------------------------------------
 
-n = frozenset({"Strawberry", "Banana", "Kiwi"}) # an immutable set
-
-# print(n)
-
+# print(frozenset({"Strawberry", "Banana", "Kiwi"})) # an immutable set
 
 # ____________________________________________________________________________________________________________________
 # Boolean Type: bool 
 # Commonly seen: in logic/if statements
 
-o = True
+# print(True)
+# print(0 == True)
+# print(1 == True)
 
-# print(o)
-# print(0 == o)
-# print(1 == o)
-
-p = False
-
-# print(p)
-# print(0 == p)
-# print(1 == p)
-
+# print(False)
+# print(0 == False)
+# print(1 == False)
 
 # ____________________________________________________________________________________________________________________
 # Binary Type: bytes, bytearray, memoryview
 # Commonly seen: unknown
 
-q = b"Hello World" # bytes
+# print(b"Hello World") # bytes
 
-# print(q)
+#-----------------------------------------
 
-r = bytearray(5) # bytearray
+# print(bytearray(5)) # bytearray
 
-# print(r)
+#-----------------------------------------
 
-t = memoryview(bytes(5)) # memoryview
-
-# print(t)
+# print(memoryview(bytes(5))) # memoryview
 
 
 # ____________________________________________________________________________________________________________________
 # None Type: NoneType
 # Commonly seen: unknown
 
-
-u = None # None
-
-print(u)
+# print(None) # None
 
 
